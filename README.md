@@ -10,7 +10,7 @@
 
 ## 🎯 Visão Geral
 
-Projeto de Business Intelligence desenvolvido para análise de viabilidade da aquisição de 6 máquinas pesadas em uma usina de açúcar, com foco em:
+Projeto de Business Intelligence desenvolvido para análise de viabilidade da aquisição de 6 máquinas pesadas em uma usina de mineração, com foco em:
 
 - 💰 **Análise de Custos Operacionais 2025** (R$ 448k em 7 meses)
 - 📈 **Monitoramento de Performance** (Meta: 95% de disponibilidade)
