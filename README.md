@@ -1,6 +1,6 @@
 # 📊 Dashboard BI - Análise de Viabilidade de Máquinas Pesadas
 
-> Dashboard interativo em Power BI para análise de investimento de R$ 2,94 milhões em máquinas pesadas
+> Dashboard interativo em Power BI para análise de investimento de R$ 2,94 milhões em máquinas pesadas.
 
 [![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](https://powerbi.microsoft.com/)
 [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
