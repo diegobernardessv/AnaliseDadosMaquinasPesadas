@@ -223,16 +223,6 @@ Cenario_Pessimista = [Custo_Op_Medio] * 1.15
 
 ---
 
-## 📚 Documentação
-
-- **[PORTFOLIO_PROJETO.md](PORTFOLIO_PROJETO.md)** - Case completo para portfólio
-- **[GUIA_POWERBI.md](GUIA_POWERBI.md)** - Guia de implementação detalhado
-- **[QUICK_START_30MIN.md](QUICK_START_30MIN.md)** - Tutorial rápido (30 min)
-- **[RESUMO_EXECUTIVO.md](RESUMO_EXECUTIVO.md)** - Resumo gerencial
-- **[Medidas_DAX_PowerBI.dax](Medidas_DAX_PowerBI.dax)** - Biblioteca de medidas
-
----
-
 ## 🎓 Habilidades Demonstradas
 
 ### Técnicas
