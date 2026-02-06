@@ -21,16 +21,16 @@ Projeto de Business Intelligence desenvolvido para análise de viabilidade da aq
 
 ## 📸 Preview do Dashboard
 
-### Página 1: Visão Executiva
+### Visão Executiva
 ![Visão Executiva](screenshots/AnaliseViabilidade.png)
 
-### Página 2: Detalhes por Equipamento
+### Detalhes por Equipamento
 ![Detalhes Equipamento](screenshots/DetalhesPorEquipamento.png)
 
-### Página 3: Disponibilidade Operacional
+### Disponibilidade Operacional
 ![Disponibilidade](screenshots/DisponibilidadeOperacional.png)
 
-### Página 4: Projeções e Cenários
+### Projeções e Cenários
 ![Projeções](screenshots/ProjecoesAnaliseCenarios.png)
 
 ---
