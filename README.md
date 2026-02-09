@@ -1,6 +1,6 @@
 # 📊 Dashboard BI - Análise de Viabilidade de Máquinas Pesadas
 
-> Dashboard interativo em Power BI para análise de investimento de R$ 2,94 milhões em máquinas pesadas.
+> Dashboard interativo em Power BI para análise de investimento de R$ 4,38 milhões em máquinas pesadas
 
 [![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](https://powerbi.microsoft.com/)
 [![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
@@ -68,15 +68,15 @@ python analise_completa.py
 
 ### 📄 **Página 1: Visão Executiva**
 **KPIs Principais:**
-- Investimento Total: R$ 4,38 Mi
+- Investimento Total: R$ 4,38 Mi (frota completa)
 - Custo Operacional Médio: R$ 138k/mês
-- Período Analisado: Jun-Dez 2025 (7 meses)
+- Período Analisado: Jan-Dez 2025 (12 meses)
 - Total Operacional: R$ 965k
 
 **Visuais:**
 - Evolução de Custos (3 categorias: Materiais, Serviços, Diesel)
 - Composição dos Custos (Rosca)
-- Gauge de Disponibilidade vs Meta
+- Cards de resumo financeiro
 
 ---
 
@@ -91,14 +91,14 @@ python analise_completa.py
 
 ### 📄 **Página 3: Disponibilidade Operacional**
 **Análise Detalhada:**
-- Cards de Performance (Acima da meta, Gap, Melhor)
-- Evolução mensal por equipamento (5 linhas)
-- Indicador de Tendência (Crescimento: +6,26%)
+- Cards de Performance
+- Evolução mensal por equipamento
+- Indicador de Tendência
 
 **Insights:**
-- 2 equipamentos acima da meta (Munck e Pipa)
-- Varredeira crítica: 70,9% (necessita atenção)
-- Tendência positiva: 83,54% → 89,80%
+- Análise de disponibilidade da frota
+- Identificação de equipamentos com baixa performance
+- Tendências de melhoria operacional
 
 ---
 
@@ -120,17 +120,17 @@ python analise_completa.py
 ## 🔍 Principais Insights
 
 ### 🚨 Crítico
-- **Varredeira Volvo VM 220** com apenas **70,9%** de disponibilidade
-- **24,1% abaixo da meta** → Requer ação imediata
+- **Diesel é o maior custo:** 47% dos custos operacionais (R$ 453k)
+- **Oportunidade de otimização:** Análise de rotas e consumo
 
 ### ✅ Destaque
-- **Caminhão Munck** com **98%** de disponibilidade
-- **Acima da meta** → Benchmark de excelência
+- **Custos controlados:** Média mensal de R$ 138k
+- **Distribuição equilibrada:** Materiais 30%, Serviços 23%, Diesel 47%
 
-### 📈 Tendência Positiva
-- Melhoria de **+6,26%** em 5 meses (ago→dez)
-- De 83,54% para 89,80%
-- Projeção: atingir 95% em **7 meses**
+### 📈 Tendência Operacional
+- Investimento total: R$ 4,38 Mi na frota completa
+- Período analisado: 7 meses (Jun-Dez 2025)
+- Base sólida para projeções 2026
 
 ### 💰 Financeiro
 - Custo real 2025 (Jun-Dez): **R$ 965 mil** (7 meses)
@@ -180,20 +180,6 @@ Custo_Op_Medio = DIVIDE([Custo_Op_Total], 7, 0)
 // Tabela Projecao_2026 com valores mensais crescentes
 // Jan: R$ 137.849 → Dez: R$ 144.741
 // Total anual: R$ 2,36 milhões
-
-// Disponibilidade Geral
-Disponibilidade_Geral = 
-    DIVIDE(
-        AVERAGE(Disponibilidade[Escavadeira]) +
-        AVERAGE(Disponibilidade[Pá Carregadeira]) +
-        AVERAGE(Disponibilidade[Varredeira]) +
-        AVERAGE(Disponibilidade[Caminhão Munck]) +
-        AVERAGE(Disponibilidade[Caminhão Pipa 1/2]),
-        5
-    )
-
-// Gap para Meta
-Gap_Meta = ([Disponibilidade_Geral] - 0.95) * 100
 
 // Cenários
 Cenario_Otimista = [Custo_Op_Medio] * 0.90
