@@ -10,12 +10,12 @@
 
 ## 🎯 Visão Geral
 
-Projeto de Business Intelligence desenvolvido para análise de viabilidade da aquisição de 6 máquinas pesadas em uma usina de mineração, com foco em:
+Projeto de Business Intelligence desenvolvido para análise de viabilidade da aquisição de 10 equipamentos (máquinas pesadas e veículos) para usina, com foco em:
 
-- 💰 **Análise de Custos Operacionais 2025** (R$ 448k em 7 meses)
+- 💰 **Análise de Custos Operacionais 2025** (R$ 965k em 7 meses)
 - 📈 **Monitoramento de Performance** (Meta: 95% de disponibilidade)
-- 🔮 **Projeções Financeiras 2026** (R$ 788k projetado com crescimento 5%)
-- ⚠️ **Identificação de Equipamentos Críticos** (Varredeira: 70,9%)
+- 🔮 **Projeções Financeiras 2026** (R$ 2,36 Mi projetado com crescimento 5%)
+- ⚠️ **Identificação de Oportunidades** de redução de custos operacionais
 
 ---
 
@@ -68,10 +68,10 @@ python analise_completa.py
 
 ### 📄 **Página 1: Visão Executiva**
 **KPIs Principais:**
-- Investimento Total: R$ 2,94 Mi
-- Custo Operacional Médio: R$ 64k/mês
-- Disponibilidade Geral: 88,09%
-- Meta: 95%
+- Investimento Total: R$ 4,38 Mi
+- Custo Operacional Médio: R$ 138k/mês
+- Período Analisado: Jun-Dez 2025 (7 meses)
+- Total Operacional: R$ 965k
 
 **Visuais:**
 - Evolução de Custos (3 categorias: Materiais, Serviços, Diesel)
@@ -82,10 +82,10 @@ python analise_completa.py
 
 ### 📄 **Página 2: Detalhes por Equipamento**
 **Conteúdo:**
-- Tabela completa da frota (6 equipamentos)
-- Custos mensais de Manutenção (Matriz detalhada)
-- Consumo de Diesel mensal (Gráfico de colunas)
-- Disponibilidade individual (Barras com linha de meta)
+- Tabela completa da frota (10 equipamentos)
+- Custos mensais de Manutenção - Materiais e Serviços (Matriz detalhada)
+- Consumo de Diesel mensal por equipamento (Gráfico de colunas)
+- Análise de composição de custos
 
 ---
 
@@ -104,17 +104,16 @@ python analise_completa.py
 
 ### 📄 **Página 4: Projeções e Cenários**
 **Análises Preditivas:**
-- Base 2025: R$ 448 mil (Jun-Dez, 7 meses)
-- Custo Médio Mensal: R$ 64 mil/mês (base)
-- Projeção 2026: R$ 788 mil (12 meses com crescimento 5%)
-- Evolução mensal: Jan R$ 64k → Dez R$ 67k
-- Meta de disponibilidade: Atingir 95% em 7 meses (Jul/2026)
-- Economia potencial: R$ 77 mil/ano
+- Base 2025: R$ 965 mil (Jun-Dez, 7 meses)
+- Custo Médio Mensal: R$ 138 mil/mês (base)
+- Projeção 2026: R$ 2,36 Mi (12 meses com crescimento 5% anual)
+- Evolução mensal: Jan R$ 138k → Dez R$ 145k
+- Potencial de otimização: R$ 193 mil/ano
 
 **Cenários Mensais:**
-- 🟢 Otimista: R$ 58k/mês (-10%)
-- 🔵 Realista: R$ 64-67k/mês (crescimento 5%)
-- 🔴 Pessimista: R$ 74k/mês (+15%)
+- 🟢 Otimista: R$ 124k/mês (-10%)
+- 🔵 Realista: R$ 138-145k/mês (crescimento 5%)
+- 🔴 Pessimista: R$ 159k/mês (+15%)
 
 ---
 
@@ -134,11 +133,11 @@ python analise_completa.py
 - Projeção: atingir 95% em **7 meses**
 
 ### 💰 Financeiro
-- Custo real 2025 (Jun-Dez): **R$ 448 mil** (7 meses)
-- Custo médio mensal: **R$ 64.040/mês**
-- Projeção 2026: **R$ 788 mil** (12 meses com crescimento 5%)
-- Evolução mensal 2026: Jan R$ 64k → Dez R$ 67k
-- Economia potencial: **R$ 77 mil/ano** (com otimização de 10%)
+- Custo real 2025 (Jun-Dez): **R$ 965 mil** (7 meses)
+- Custo médio mensal: **R$ 137.849/mês**
+- Projeção 2026: **R$ 2,36 milhões** (12 meses com crescimento 5%)
+- Evolução mensal 2026: Jan R$ 138k → Dez R$ 145k
+- Economia potencial: **R$ 193 mil/ano** (com otimização de 10%)
 
 ---
 
@@ -159,7 +158,7 @@ python analise_completa.py
 ### Dados
 - **Microsoft Excel** - 4 planilhas integradas
 - **7 meses** de dados operacionais (Jun-Dez 2025)
-- **6 equipamentos** monitorados
+- **10 equipamentos** na frota total
 
 ---
 
@@ -171,14 +170,16 @@ Custo_Op_Total =
     SUM('Custo Manutenção'[Custo Materiais]) + 
     SUM('Custo Manutenção'[Custo Serviços]) + 
     SUM('Custo Diesel'[Custo Total/Mês])
+    // Total: R$ 964.947
 
 // Custo Médio Mensal (base 2025)
 Custo_Op_Medio = DIVIDE([Custo_Op_Total], 7, 0)
+    // Média: R$ 137.849/mês
 
 // Projeção 2026 com Crescimento 5%
 // Tabela Projecao_2026 com valores mensais crescentes
-// Jan: R$ 64.040 → Dez: R$ 66.997
-// Total anual: R$ 788 mil
+// Jan: R$ 137.849 → Dez: R$ 144.741
+// Total anual: R$ 2,36 milhões
 
 // Disponibilidade Geral
 Disponibilidade_Geral = 
@@ -205,21 +206,25 @@ Cenario_Pessimista = [Custo_Op_Medio] * 1.15
 ## 📊 Dados do Projeto
 
 ### Equipamentos Analisados
-| # | Equipamento | Marca/Modelo | Valor | Disponibilidade |
-|---|-------------|--------------|-------|-----------------|
-| 1 | Escavadeira | Hyundai R140 LC-9SB | R$ 470.000 | 93,1% |
-| 2 | Pá Carregadeira | Caterpillar 924K | R$ 550.000 | 88,0% |
-| 3 | Caminhão Munck | Volkswagen 24250 | R$ 550.000 | **98,6%** 🏆 |
-| 4 | Varredeira | Volvo VM 220 | R$ 910.800 | **70,9%** ⚠️ |
-| 5 | Caminhão Pipa | Mercedes Atego 1719 | R$ 339.890 | 89,9% |
-| 6 | Basculante | SR / 3Eixos | R$ 120.000 | - |
-| **TOTAL** | | | **R$ 2.940.690** | **88,09%** |
+| # | Equipamento | Marca/Modelo | Valor |
+|---|-------------|--------------|-------|
+| 1 | Pipa | M. Benz Atego 1719 | R$ 455.000 |
+| 2 | Pipa | Ford Cargo 1619 | R$ 350.000 |
+| 3 | Automóvel | Peugeot 206 1.4 FX | R$ 22.000 |
+| 4 | Garra Hidráulica | M. Benz L 2635 6x4 | R$ 240.000 |
+| 5 | Basculante | SR 3Eixos | R$ 250.000 |
+| 6 | Emergência | Fiat Ducato Maxx Cargo 2,8 | R$ 236.000 |
+| 7 | Escavadeira | Hyundai R140 LC-9SB | R$ 540.000 |
+| 8 | Carregadeira | Caterpillar 924K | R$ 500.000 |
+| 9 | Munck | Volkswagen 24250 6x2 | R$ 650.000 |
+| 10 | Varredeira | Volvo VM 220 | R$ 1.135.000 |
+| **TOTAL** | | | **R$ 4.378.000** |
 
-### Composição de Custos (7 meses)
-- 🟢 **Materiais:** R$ 190.113 (42,41%)
-- 🟠 **Diesel:** R$ 164.000 (36,54%)
-- 🔵 **Serviços:** R$ 94.357 (21,05%)
-- **TOTAL:** R$ 448.470
+### Composição de Custos (7 meses - Jun a Dez 2025)
+- 🟠 **Diesel:** R$ 453.237 (46,97%)
+- 🟢 **Materiais:** R$ 291.808 (30,24%)
+- 🔵 **Serviços:** R$ 219.902 (22,79%)
+- **TOTAL:** R$ 964.947
 
 ---
 
@@ -282,7 +287,7 @@ Dados sensíveis foram anonimizados/simulados quando necessário.
 - ✨ **4 páginas interativas** e navegáveis
 - ✨ **25+ visuais customizados**
 - ✨ **15+ medidas DAX**
-- ✨ **R$ 2,94 Mi em ativos** analisados
+- ✨ **R$ 4,38 Mi em ativos** analisados
 - ✨ **Insights acionáveis** para tomada de decisão
 
 ---
